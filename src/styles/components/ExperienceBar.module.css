@@ -1,0 +1,111 @@
+@media(max-width: 1080px) {
+  .experienceBarContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
+    background: var(--blue);
+  }
+
+  .experienceBar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+  }
+
+  .experienceBar>div {
+    flex: 1;
+    border-radius: 4px;
+    background: var(--gray-line);
+    margin: 0 1.5rem;
+    position: relative;
+    height: 20px;
+  }
+
+  .experienceBar>div>div {
+    border-radius: 4px;
+    background: var(--green);
+    height: 20px;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0.5s;
+  }
+
+  span.currentExperience{
+    min-width: 50px;
+    position: absolute;
+    top: 23px;
+    transform: translateX(-50%);
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0.5s;
+  }
+}
+
+@media(min-width: 1080px) {
+  .experienceBarContainer {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--blue);
+
+    height: 100vh;
+    width: 160px;
+  }
+
+  .experienceBar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3.5rem;
+    height: 500px;
+  }
+
+  .experienceBar>div {
+    flex: 1;
+    border-radius: 4px;
+    background: var(--gray-line);
+    margin: 0 1.5rem;
+    position: relative;
+    width: 30px;
+  }
+  
+  .experienceBar>div>div {
+    border-radius: 4px;
+    width: 30px;
+    background: var(--green);
+    position: absolute;
+    bottom: 0;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0.5s;
+  }
+  
+  span.currentExperience {
+    position: absolute;
+    right: 40px;
+    transform: translateY(50%);
+    text-align: center;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0.5s;
+  }
+}
+
+.experienceBar span {
+  font-size: 1rem;
+  color: var(--white);
+  font-weight: bold;
+}
+
+.experienceBar>span {
+  margin: 8px;
+}
+

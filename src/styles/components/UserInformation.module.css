@@ -1,0 +1,59 @@
+@media(max-width: 720px) {
+  .userInformationContainer {
+    min-height: 500px;
+  }
+}
+
+.userInformationContainer {
+  height: 100%;
+  max-height: 520px;
+
+  background: var(--white);
+  border-radius: 5px;
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem 2rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.userInformationContainer header {
+  color: var(--blue);
+  font-weight: 600;
+  font-size: 1.25rem;
+  padding: 0 1rem 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.userInformationContainer main {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.userInformationContainer .resetButton {
+  width: 100%;
+  height: 2rem;
+  margin-top: 2rem;
+
+  padding: 0 0.5rem;
+
+  border: 0;
+  border-radius: 5px;
+
+  background: var(--blue);
+  color: var(--white);
+
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.userInformationContainer .resetButton:hover {
+  background: var(--red);
+}

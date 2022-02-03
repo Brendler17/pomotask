@@ -1,0 +1,72 @@
+.pomodoroContainer{
+  width: 100%;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  margin: 3.5rem 0 1.5rem 0;
+  padding-bottom: 1rem;
+
+  border-bottom: 1px solid #d7d8da;
+
+  font-weight: 500;
+}
+
+.pomodoroContainer form{
+  display: grid;
+  grid-template-columns: 1fr 3rem;
+  gap: 2.70rem;
+  align-items: center;
+}
+
+.pomodoroContainer form > div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.pomodoroContainer input{
+  width: 3.5rem;
+  margin: 0 0.5rem;
+  text-align: center;
+  font-size: 1.5rem;
+
+  border-radius: 5px;
+  border: 0;
+}
+
+.pomodoroContainer span{
+  font-size: 1.25rem;
+}
+
+.pomodoroButton{
+  height: 3rem;
+  padding: 0.5rem;
+
+  background: var(--blue);
+  color: var(--white);
+  
+  border-radius: 5px;
+  border: none;
+  font-weight: bold;
+
+  transition: background-color 0.2s;
+}
+
+.pomodoroButton:hover{
+  background: var(--blue-dark);
+}
+
+.pomodoroTimerContainer,
+.pomodoroRestContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pomodoroRestContainer{
+  margin-top: 1rem;
+}

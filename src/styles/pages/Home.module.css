@@ -1,0 +1,81 @@
+@media(max-width: 720px) {
+  .container section {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-content: center;
+  }
+  .container .homeFooter{
+    padding-bottom: 1rem;
+  }
+}
+
+@media(max-width: 1080px) {
+  .container section {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-content: center;
+  }
+  .container .homeFooter{
+    padding-bottom: 1rem;
+  }
+}
+
+@media(min-width: 1080px) {
+  .container section {
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6.25rem;
+    align-content: center;
+  }
+  .container .homeFooter{
+    padding-bottom: 0.5rem;
+  }
+}
+
+.container {
+  height: 100vh;
+  max-width: 922px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem;
+
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.changeLayoutContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 0.5rem;
+  gap: 0.5rem;
+}
+
+.changeLayoutContainer button {
+  height: 1rem;
+  width: 50%;
+
+  background-color: var(--gray-line);
+
+  border-radius: 10px;
+  border: none;
+}
+
+.changeLayoutContainer .buttonActive {
+  background: var(--white);
+}
+
+.container .homeFooter{
+  margin-top: 3rem;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.container .homeFooter a{
+  color: var(--blue);
+}

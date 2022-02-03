@@ -1,0 +1,21 @@
+.infoPomodorsContainer{
+  width: 100%;
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 0.5rem;
+  margin-top: 1rem;
+  
+  border-bottom: 1px solid #d7d8da;
+
+  font-weight: 500;
+}
+
+.infoPomodorsContainer span:first-child{
+  font-size: 1.3rem;
+}
+
+.infoPomodorsContainer span:last-child{
+  font-size: 1.5rem;
+}

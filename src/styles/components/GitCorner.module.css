@@ -1,0 +1,30 @@
+.gitCornerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gitCornerContainer a {
+  position: fixed;
+  top: 20px;
+  left: -90px;
+
+  display: block;
+  margin: 0;
+  padding: 14px 110px;
+
+  color: #000;
+  background: rgb(255, 145, 0);
+  
+  font-size: 1rem;
+  line-height: 1rem;
+  text-align: center;
+  text-decoration: none;
+
+  transition: all 0.2s linear;
+  transform: rotate(315deg);
+}
+
+.gitCornerContainer a:hover{
+  background: rgb(173, 109, 24);
+}
