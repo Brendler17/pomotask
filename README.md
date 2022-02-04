@@ -10,17 +10,17 @@
 
 <br>
 
-<img alt="GitHub repo size" title="GitHub repo size" src="https://img.shields.io/github/languages/code-size/Brendler17/pomotask?label=Repo%20Size&logo=github&logoColor=white&style=flat-square" />
-
-<img src="https://img.shields.io/github/deployments/Brendler17/pomotask/Production?color=50fa7b&label=Vercel%20Deploy&labelColor=282a36&logo=Vercel" />
+<img alt="GitHub repo size" title="GitHub repo size" src="https://img.shields.io/github/repo-size/Brendler17/pomotask?color=blueviolet&style=flat-square" />
+  
+<img alt="vercel deploy" src="https://img.shields.io/badge/Vercel%20Deploy-active-blueviolet" />
 
 <a href="https://github.com/Brendler17/pomotask/blob/master/LICENSE">
- <img src="https://img.shields.io/github/license/Brendler17/pomotask?style=flat-square" alt="license"/>
+ <img src="https://img.shields.io/github/license/Brendler17/pomotask?color=blueviolet&style=flat-square" alt="license"/>
 </a>
 
-<img alt="GitHub last commit" title="GitHub last commit" src="https://img.shields.io/github/commit-activity/m/Brendler17/pomotask?style=flat-square" />
+<img alt="GitHub last commit" title="GitHub last commit" src="https://img.shields.io/github/last-commit/Brendler17/pomotask?color=blueviolet&style=flat-square" />
 
-<img alt="GitHub language coun" title="GitHub language coun" src="https://img.shields.io/github/languages/count/Brendler17/pomotask?style=flat-square" />
+<img alt="GitHub language coun" title="GitHub language coun" src="https://img.shields.io/github/languages/count/Brendler17/pomotask?color=blueviolet&style=flat-square" />
 
 <br>
 
