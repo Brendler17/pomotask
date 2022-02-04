@@ -1,5 +1,5 @@
 @media(max-width: 1080px) {
-  .experienceBarContainer{
+  .experienceBarContainer {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -33,7 +33,7 @@
     transition-delay: 0.5s;
   }
 
-  span.currentExperience{
+  span.currentExperience {
     min-width: 50px;
     position: absolute;
     top: 23px;
@@ -76,7 +76,7 @@
     position: relative;
     width: 30px;
   }
-  
+
   .experienceBar>div>div {
     border-radius: 4px;
     width: 30px;
@@ -87,7 +87,7 @@
     transition-timing-function: ease-in-out;
     transition-delay: 0.5s;
   }
-  
+
   span.currentExperience {
     position: absolute;
     right: 40px;
@@ -108,4 +108,3 @@
 .experienceBar>span {
   margin: 8px;
 }
-

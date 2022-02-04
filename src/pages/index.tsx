@@ -76,10 +76,10 @@ export default function Home(props: HomeProps) {
                 <Countdown />
               </div>
 
-              <div>
+              <div className={styles.flexLayoutContainer}>
                 {isActiveBox ? (
                   <>
-                    <div className={styles.changeLayoutContainer}>
+                    <div className={styles.buttonsChangeContainer}>
                       <button onClick={selectBox} className={styles.buttonActive}></button>
                       <button onClick={selectInfo}></button>
                     </div>
@@ -87,7 +87,7 @@ export default function Home(props: HomeProps) {
                   </>
                 ) : (
                   <>
-                    <div className={styles.changeLayoutContainer}>
+                    <div className={styles.buttonsChangeContainer}>
                       <button onClick={selectBox}></button>
                       <button onClick={selectInfo} className={styles.buttonActive}></button>
                     </div>

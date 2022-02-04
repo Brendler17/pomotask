@@ -46,7 +46,15 @@
   position: relative;
 }
 
-.changeLayoutContainer {
+/* LAYOUT FLEX */
+.flexLayoutContainer{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.buttonsChangeContainer {
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -56,7 +64,7 @@
   gap: 0.5rem;
 }
 
-.changeLayoutContainer button {
+.buttonsChangeContainer button {
   height: 1rem;
   width: 50%;
 
@@ -66,9 +74,11 @@
   border: none;
 }
 
-.changeLayoutContainer .buttonActive {
+.buttonsChangeContainer .buttonActive {
   background: var(--white);
 }
+
+/* FOOTER */
 
 .container .homeFooter{
   margin-top: 3rem;

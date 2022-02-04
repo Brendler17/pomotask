@@ -10,7 +10,7 @@ export default function GitCorner() {
       {width >= 1080 && (
         <div className={styles.gitCornerContainer}>
           <a
-            href="https://github.com/Brendler17"
+            href="https://github.com/Brendler17/pomotask"
             title="Código do Projeto"
             target="_blank"
             rel="noreferrer"

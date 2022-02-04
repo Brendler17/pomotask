@@ -6,7 +6,6 @@
 
 .userInformationContainer {
   height: 100%;
-  max-height: 520px;
 
   background: var(--white);
   border-radius: 5px;
