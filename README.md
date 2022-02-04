@@ -1,18 +1,18 @@
 <p align="center">
   <a href="https://pomotask-hazel.vercel.app">
-    <img title="Visualizar aplicação" width="25%" src="./.github/move-it.svg">
+    <img title="Visualizar aplicação" width="25%" src="https://i.ibb.co/44Mny5D/Pomo-Task-1-removebg-preview.png">
   </a>
 </p>
 
 <h4 align="center">
   
-[Descrição](#desc) ✦ [Tecnologias](#tec) ✦ [Projeto](#Projeto) ✦ [Prototipagem](#prototipagem) ✦ [Rodando localmente](#local) ✦ [Licença](#lic)
+[Descrição](#desc)  |  [Tecnologias](#tec) | [Funcionalidades](#func) | [Projeto](#Projeto) | [Rodando localmente](#local) | [Licença](#lic)
 
 <br>
 
-<img alt="GitHub repo size" title="GitHub repo size" src="https://img.shields.io/github/languages/code-size/Brendler17/pomotask?label=repo%20size&logo=github&logoColor=white&style=flat-square" />
+<img alt="GitHub repo size" title="GitHub repo size" src="https://img.shields.io/github/languages/code-size/Brendler17/pomotask?label=Repo%20Size&logo=github&logoColor=white&style=flat-square" />
 
-<img src="https://img.shields.io/github/deployments/Brendler17/pomotask/Production?color=50fa7b&label=Vercel%20deploy&labelColor=282a36&logo=Vercel" />
+<img src="https://img.shields.io/github/deployments/Brendler17/pomotask/Production?color=50fa7b&label=Vercel%20Deploy&labelColor=282a36&logo=Vercel" />
 
 <a href="https://github.com/Brendler17/pomotask/blob/master/LICENSE">
  <img src="https://img.shields.io/github/license/Brendler17/pomotask?style=flat-square" alt="license"/>
@@ -29,13 +29,14 @@
 <br>
 
 <h2 id="desc">
-💟 Sobre o projeto
+💻 Sobre o projeto
 </h2>
 
 <p align="justify">
-O <b>Move it</b> é uma aplicação desenvolvida com o intuito de ajudar aqueles que passam um bom tempo à frente do computador, como é o caso de nós <i>desenvolvedores</i> 👨‍💻.
+O <b>Pomo Task</b> é uma aplicação desenvolvida com o intuito de unir a técnica de pomodoro com a realização de exercícios em forma de desafios, destinada a ajudar quem passa bastante tempo á frente do computador, que é o caso de nós <i>devs</i>.
 <br/>
-O que acontece é que essas pessoas com o passar do tempo, acabam desenvolvendo certos problemas gerados por esse uso excessivo, seja eles nas articulações ou nos olhos gerando problema de visão. Com isso o <i>Move it</i> entra para ajudar, unido a <i><u> técnica de pomodoro</u></i> com os exercícios/alongamentos que "ajudam a evitar esse problema citado acima". Tudo isso junto em uma aplicação que usa a gamificação para deixar os desafios mais divertidos.
+Com o uso excessivo do computador alguns problemas podem ser gerados futuramente, sejam eles nas articulações ou até mesmo nos olhos, gerando problemas de visão.
+Aí que entra o <b>Pomo Task</b>, a cada pomodoro um novo exercício/alongamento é disponibilizado, fazendo com que a cada período de estudo nosso corpo também descanse, a fim de evitar os problemas citados acima.
 </p>
 
 <h2 id="tec">
@@ -43,14 +44,14 @@ O que acontece é que essas pessoas com o passar do tempo, acabam desenvolvendo 
 </h2>
 
 <a href="https://reactjs.org">
- <img alt="reactjs" title="reactjs" src="https://img.shields.io/static/v1?label=React&message=Javascript%20library&style=social&logo=React&logoColor=0088CC" />
+ <img alt="reactjs" title="reactjs" src="https://img.shields.io/static/v1?label=React&message=Javascript%20Library&style=social&logo=React&logoColor=0088CC" />
 </a>
 
 <br/>
 
 <p align="left">
 <a href="https://nextjs.org">
- <img alt="nextjs" title="nextjs" src="https://img.shields.io/static/v1?label=next%20js&message=Framework%20react&style=social&logo=Next.js&logoColor=black" />
+ <img alt="nextjs" title="nextjs" src="https://img.shields.io/static/v1?label=Next.js&message=Framework%20React&style=social&logo=Next.js&logoColor=black" />
 </a>
 
 <br/>
@@ -61,50 +62,42 @@ O que acontece é que essas pessoas com o passar do tempo, acabam desenvolvendo 
 
 <br/>
 
-<a href="https://styled-components.com">
- <img alt="styled-components" title="styled-components" src="https://img.shields.io/static/v1?label=Styled%20Components&message=Library,%20CSS%20in%20JS&&style=social&logo=styled-components" />
-</a>
-
-<br/>
-
 <a href="https://vercel.com">
  <img alt="vercel" title="vercel" src="https://img.shields.io/static/v1?label=vercel&message=Deploy&&style=social&logo=Vercel" />
 </a>
-
-<br>
+  
+ <br/>
 
 <a href="https://www.figma.com/file/cniET9Xo3ZIwoqJ4PWcovu/Move.it-1.0?node-id=160%3A2761">
- <img alt="figma" title="figma" src="https://img.shields.io/static/v1?label=Figma&message=Project%20prototyping&style=social&logo=Figma&logoColor=F24E1E" />
+ <img alt="figma" title="figma" src="https://img.shields.io/static/v1?label=Figma&message=Project%20Prototyping&style=social&logo=Figma&logoColor=F24E1E" />
 </a>
 
 <br>
 
-<a href="https://www.framer.com/motion/">
- <img alt="framer-motion" title="framer-motion" src="https://img.shields.io/static/v1?label=Framer-Motion&message=Motion%20library%20for%20React&style=social&logo=Framer&logoColor=0055FF" />
-</a>
+<h2 id="func">⚔ Funcionalidades</h2>
 
-<br>
+- [X] Opção de selecionar o `tempo de pomodoro`.
+- [X] Opção de selecionar o `tempo de descanso` entre cada pomodoro.
+- [x] Opção de `iniciar um ciclo` para receber um desafio.
+- [x] Opção de `abandonar um ciclo` ativo.
+- [x] `Liberar um desafio` quando  o tempo de pomodoro selecionado chegar ao fim.
+- [x] `Tempo de descanso` automático.
+- [x] `Controle de descanso` não permitindo o usuário interagir com o app até o descanso ser finalizado.
+- [x] Opções de `realizar desafio` ou `falhar desafio` quando o tempo de descanso for finalizado.
+- [x] `Notificação` quando liberar um novo desafio e quando o ciclo de descanso chegar ao fim.
+- [x] Disponibilidade para `iniciar um novo clico` ao preencher as opções do desafio.
+- [x] `Menu de estatísticas` do usuário.
+- [x] `Número de desafios concluídos`.
+- [x] `Horas totais` de todos pomodoros do usuário.
+- [x] `Horas diárias` de pomodoros do usuário.
+- [x] `Número de pomodoros totais`.
+- [x] `Número de pomodoros diários`.
+- [x] Opção de `resetar os valores diários` para um melhor controle.
+- [x] `Receber experiência` ao concluir desafios.
+- [x] `Barra de progresso` (xp) do usuário.
+- [x] `Subir de level` ao obter a experiência necessária para o próximo nível.
+- [x] `Mensagem ao subir de level`.
 
-<a href="https://lottiefiles.com">
- <img alt="Lottie Files" title="Lottie Files" src="https://img.shields.io/static/v1?label=Lottie%20Files&message=Animations&style=social&logo=&logoColor=F24E1E" />
-</a>
-
-<br>
-
-<h2>⚔ Funcionalidades</h2>
-
-- [x] Opção de `Iniciar um ciclo` para receber um desafio.
-- [x] `Barra de progresso` (xp) do usuário atual.
-- [x] `Numero de desafios concluído`.
-- [x] `Receber um desafio`, quando o tempo estipulado (25 min) do ciclo chegar ao fim.
-- [x] `Notificação` quando o ciclo chega ao fim.
-- [x] Opções de `desafio concluído` ou `desafio não concluído` ao receber um desafio.
-- [x] Disponibilidade para `iniciar um novo ciclo` ao selecionar desafio não concluído.
-- [x] `Receber experiencia` ao concluir um desafio.
-- [x] `Subir de nível` ao obter a quantidade estipulada para ir para o próximo level.
-- [x] `Animação` ao subir de level.
-- [x] `Navegação` entre pagina pelo side bar.
-- [x] `Temas` dark (dracula) e light (nlw).
 
 <br>
 
@@ -112,44 +105,10 @@ O que acontece é que essas pessoas com o passar do tempo, acabam desenvolvendo 
 👔 Projeto
 </h2>
 
-<a href="https://antonionarcilio-move-it.vercel.app">
-<img title="move.it" src="./.github/moveit-display.png">
+<a href="https://pomotask-hazel.vercel.app">
+<img title="PomoTask" src="https://i.ibb.co/wyxvYVD/Design-sem-nome-1.jpg">
 </a>
 <span align="center"><h6>Clique na imagem para visualizar a aplicação</h6></span>
-
-<br>
-
-<h2>🖥 Capturas de tela</h2>
-
-<table>
-  <tr align="center">
-    <td><h5>Notificação</h5></td>
-    <td><h5>Subindo de level</h5></td>
-  </tr>
-  <tr>
-    <td><a href="./.github/notification.webp?raw=true"><img src="./.github/notification.webp"></a></td>
-    <td><a href="./.github/levelup.webp?raw=true"><img src="./.github/levelup.webp"></a></td>
-  </tr>
-  <tr align="center">
-    <td><h5>Temas dark / light</h5></td>
-    <td><h5>Animação de carregamento</h5></td>
-  </tr>
-  <tr>
-    <td><a href="./.github/dark-and-light-mode.webp?raw=true"><img src="./.github/dark-and-light-mode.webp"></a></td>
-    <td><a href="./.github/load-animation.webp?raw=true"><img src="./.github/load-animation.webp"></a></td>
-  </tr>
-</table>
-
-<br>
-
-<h2 id="prototipagem">
-✈ Prototipagem
-</h2>
-
-<a href="https://www.figma.com/file/cniET9Xo3ZIwoqJ4PWcovu/Move.it-1.0?node-id=160%3A2761">
-<img title="move.it" src="./.github/prototipagem.png">
-</a>
-<h6 align="center">Clique na imagem para ver o projeto no figma</h6>
 
 <br>
 
@@ -164,7 +123,7 @@ O que acontece é que essas pessoas com o passar do tempo, acabam desenvolvendo 
 > 📝 Clonando o repositório e entrando no diretório criado.
 
 ```shell
-git clone git@github.com:antonionarcilio/move-it.git && cd move-it
+git clone git@github.com:brendler17/pomotask.git && cd move-it
 ```
 
 > 📝 Baixando / Instalando dependências.
@@ -191,4 +150,4 @@ yarn dev
 
 Este projeto esta sobe a licença [MIT](./LICENSE).
 
-created by [Antonio Narcilio](https://github.com/AntonioNarcilio) ft. [Rocketseat](https://github.com/Rocketseat)
+created by [Gustavo Brendler](https://github.com/Brendler17) & [Rocketseat](https://github.com/Rocketseat)
