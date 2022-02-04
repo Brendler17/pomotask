@@ -123,7 +123,7 @@ Aí que entra o <b>Pomo Task</b>, a cada pomodoro um novo exercício/alongamento
 > 📝 Clonando o repositório e entrando no diretório criado.
 
 ```shell
-git clone git@github.com:Brendler17/pomotask.git && cd move-it
+git clone git@github.com:Brendler17/pomotask.git && cd pomotask
 ```
 
 > 📝 Baixando / Instalando dependências.
