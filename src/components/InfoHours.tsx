@@ -4,28 +4,28 @@ import styles from '../styles/components/InfoHours.module.css'
 
 export function InfoHours() {
 
-  const { hoursPerDay, hoursTotal } = useContext(StatsContext)
+  const { hoursPerDay, hoursTotal } = useContext(StatsContext);
 
-  const formatHourDay = hoursPerDay / 60
-  const formatHourTotal = hoursTotal / 60
+  const formatHourDay = hoursPerDay / 60;
+  const formatHourTotal = hoursTotal / 60;
 
   let hourPerDay, minutePerDay,
-    hourTotal, minuteTotal
+    hourTotal, minuteTotal;
 
   if (formatHourDay >= 60) {
-    hourPerDay = String(Math.round(formatHourDay / 60)).padStart(2, '0').concat('h')
-    minutePerDay = String(formatHourDay % 60).padStart(2, '0')
+    hourPerDay = String(Math.floor(formatHourDay / 60)).padStart(2, '0').concat('h');
+    minutePerDay = String(formatHourDay % 60).padStart(2, '0');
 
   } else {
-    minutePerDay = String(formatHourDay)
+    minutePerDay = String(formatHourDay);
   }
 
   if (formatHourTotal >= 60) {
-    hourTotal = String(Math.round(formatHourTotal / 60)).padStart(2, '0').concat('h')
-    minuteTotal = String(formatHourTotal % 60).padStart(2, '0')
+    hourTotal = String(Math.floor(formatHourTotal / 60)).padStart(2, '0').concat('h');
+    minuteTotal = String(formatHourTotal % 60).padStart(2, '0');
 
   } else {
-    minuteTotal = String(formatHourTotal)
+    minuteTotal = String(formatHourTotal);
   }
 
   return (
