@@ -21,7 +21,7 @@ interface ChallengesProviderProps {
   level: number;
   currentExperience: number;
   completedChallenges: number;
-  selectBox: () => void;
+  selectChallengesContainer: () => void;
 }
 
 interface Challenge {
@@ -32,7 +32,11 @@ interface Challenge {
 
 export const ChallengesContext = createContext({} as ChallengesContextData);
 
-export function ChallengesProvider({ children, selectBox,...rest }: ChallengesProviderProps) {
+export function ChallengesProvider({
+  children,
+  selectChallengesContainer,
+  ...rest
+}: ChallengesProviderProps) {
 
   const [level, setLevel] = useState(rest.level ?? 1);
   const [currentExperience, setCurrentExperience] = useState(rest.currentExperience ?? 0);
@@ -47,9 +51,9 @@ export function ChallengesProvider({ children, selectBox,...rest }: ChallengesPr
   }, [])
 
   useEffect(() => {
-    Cookies.set('level', String(level), {expires: 60});
-    Cookies.set('currentExperience', String(currentExperience), {expires: 60});
-    Cookies.set('completedChallenges', String(completedChallenges), {expires: 60});
+    Cookies.set('level', String(level), { expires: 60 });
+    Cookies.set('currentExperience', String(currentExperience), { expires: 60 });
+    Cookies.set('completedChallenges', String(completedChallenges), { expires: 60 });
   }, [level, currentExperience, completedChallenges])
 
   function levelUp() {
@@ -63,7 +67,7 @@ export function ChallengesProvider({ children, selectBox,...rest }: ChallengesPr
 
     setActiveChallenge(challenge);
 
-    selectBox();
+    selectChallengesContainer();
 
     new Audio('/notification.mp3').play()
 

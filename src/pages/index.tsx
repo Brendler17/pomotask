@@ -34,17 +34,10 @@ interface HomeProps {
 
 export default function Home(props: HomeProps) {
 
-  const [isActiveInfo, setIsActiveInfo] = useState(false)
-  const [isActiveBox, setIsActiveBox] = useState(true)
+  const [selectedContainer, setSelectedContainer] = useState('challenges');
 
-  function selectInfo() {
-    setIsActiveInfo(true)
-    setIsActiveBox(false)
-  }
-
-  function selectBox() {
-    setIsActiveBox(true)
-    setIsActiveInfo(false)
+  function selectChallengesContainer() {
+    setSelectedContainer('challenges');
   }
 
   return (
@@ -52,7 +45,7 @@ export default function Home(props: HomeProps) {
       level={props.level}
       currentExperience={props.currentExperience}
       completedChallenges={props.completedChallenges}
-      selectBox={selectBox}
+      selectChallengesContainer={selectChallengesContainer}
     >
       <ExperienceBarDynamic />
       <GitCornerDynamic />
@@ -67,7 +60,9 @@ export default function Home(props: HomeProps) {
           pomodorosPerDay={props.pomodorosPerDay}
           pomodorosTotal={props.pomodorosTotal}
         >
-          <CountdownProvider selectBox={selectBox}>
+          <CountdownProvider
+          selectChallengesContainer={selectChallengesContainer}
+          >
             <section>
 
               <div>
@@ -77,23 +72,19 @@ export default function Home(props: HomeProps) {
               </div>
 
               <div className={styles.flexLayoutContainer}>
-                {isActiveBox ? (
-                  <>
-                    <div className={styles.buttonsChangeContainer}>
-                      <button onClick={selectBox} className={styles.buttonActive}></button>
-                      <button onClick={selectInfo}></button>
-                    </div>
-                    <ChallengeBox />
-                  </>
-                ) : (
-                  <>
-                    <div className={styles.buttonsChangeContainer}>
-                      <button onClick={selectBox}></button>
-                      <button onClick={selectInfo} className={styles.buttonActive}></button>
-                    </div>
-                    <UserInformation />
-                  </>
-                )}
+                <>
+                  <div className={styles.buttonsChangeContainer}>
+                    <button
+                      onClick={() => setSelectedContainer('challenges')}
+                      className={selectedContainer === 'challenges' ? styles.buttonActive : ''}
+                    />
+                    <button
+                      onClick={() => setSelectedContainer('informations')}
+                      className={selectedContainer === 'informations' ? styles.buttonActive : ''}
+                    />
+                  </div>
+                  {selectedContainer === 'challenges' ? <ChallengeBox /> : <UserInformation />}
+                </>
               </div>
 
             </section >

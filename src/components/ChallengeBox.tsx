@@ -38,7 +38,7 @@ export function ChallengeBox() {
           {isRest ? (
             <footer className={styles.footerRest}>
               <span>Fique tranquilo! <br /></span>
-              <span>Primeiro termine seu tempo de descanso, depois marque se terminou o desafio ou não.</span>
+              <span>Primeiro termine seu tempo de descanso, depois informe se terminou o desafio ou não.</span>
             </footer>
           ) : (
             <footer className={styles.footerNoRest}>

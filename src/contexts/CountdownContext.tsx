@@ -2,6 +2,7 @@ import { createContext, ReactNode, useContext, useEffect, useState } from "react
 import { ChallengesContext } from "./ChallengesContext";
 import { GlobalContext } from "./GlobalContext";
 import { StatsContext } from "./StatsContext";
+import * as workerTimers from 'worker-timers';
 
 interface CountdownContextData {
   minutes: number;
@@ -16,14 +17,15 @@ interface CountdownContextData {
 
 interface CountdownProviderProps {
   children: ReactNode;
-  selectBox: () => void;
+  selectChallengesContainer: () => void;
 }
 
 export const CountdownContext = createContext({} as CountdownContextData);
 
-let countdownTimeout: NodeJS.Timeout;
-
-export function CountdownProvider({ children, selectBox }: CountdownProviderProps) {
+export function CountdownProvider({ 
+  children, 
+  selectChallengesContainer 
+}: CountdownProviderProps) {
 
   const { initialTime, initialRestTime } = useContext(GlobalContext);
   const { startNewChallenge } = useContext(ChallengesContext);
@@ -33,16 +35,19 @@ export function CountdownProvider({ children, selectBox }: CountdownProviderProp
   const [hasFinished, setHasFinished] = useState(false);
   const [isActive, setIsActive] = useState(false);
   const [isRest, setIsRest] = useState(false);
+  const [countdownTimeout, setCountdownTimeout] = useState(0);
 
   const minutes = Math.floor(time / 60);
   const seconds = time % 60;
+
+  let timeOutId = 0;
 
   function startCountdown() {
     setIsActive(true);
   }
 
   function resetCountdown() {
-    clearTimeout(countdownTimeout);
+    workerTimers.clearTimeout(countdownTimeout);
     setIsActive(false);
     setIsRest(false);
     setTime(initialTime);
@@ -60,9 +65,11 @@ export function CountdownProvider({ children, selectBox }: CountdownProviderProp
 
   useEffect(() => {
     if ((isActive || isRest) && time > 0) {
-      countdownTimeout = setTimeout(() => {
-        setTime(time - 1)
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+      timeOutId = workerTimers.setTimeout(() => {
+        setTime(time - 1);
       }, 1000);
+      setCountdownTimeout(timeOutId);
     } else if (isActive && time === 0) {
       setHasFinished(true);
       setIsActive(false);
@@ -70,13 +77,13 @@ export function CountdownProvider({ children, selectBox }: CountdownProviderProp
       updatePomodoros();
       startNewChallenge();
 
-      setTimeout(() => {
+      workerTimers.setTimeout(() => {
         startRestCountdown();
       }, 500);
     } else if (isRest && time === 0) {
       setIsRest(false);
       new Audio('/notification.mp3').play()
-      selectBox()
+      selectChallengesContainer();
     }
   }, [isActive, isRest, time])
 
