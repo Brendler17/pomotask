@@ -1,46 +1,48 @@
 @media(max-width: 1080px) {
-  .profileContainer{
+  .profileContainer {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 1rem;
   }
 
-  .profileContainer div{
+  .profileContainer div {
     display: flex;
     flex-direction: column;
   }
 }
 
 @media(min-width: 1080px) {
-  .profileContainer{
+  .profileContainer {
     display: flex;
     align-items: center;
+    gap: 1rem;
   }
 }
 
-.profileContainer > span > img{
+.profileContainer>span>img {
   width: 5.5rem;
   height: 5.5rem;
   border-radius: 50%;
 }
 
-.profileContainer > div{
+/* .profileContainer > div{
   margin-left: 1.5rem;
-}
+} */
 
-.profileContainer div strong{
+.profileContainer div strong {
   font-size: 1.5rem;
   font-weight: 600;
   color: var(--title);
 }
 
-.profileContainer div div{
+.profileContainer div div {
   display: flex;
   align-items: center;
   margin-top: 0.5rem;
 }
 
-.profileContainer div div > p{
+.profileContainer .level {
   font-size: 1rem;
   margin-left: 0.5rem;
 }

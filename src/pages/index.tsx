@@ -11,6 +11,7 @@ import { CountdownProvider } from "../contexts/CountdownContext";
 import { ChallengesProvider } from "../contexts/ChallengesContext";
 import { StatsProvider } from "../contexts/StatsContext";
 import styles from '../styles/pages/Home.module.css';
+import { GlobalProvider } from "../contexts/GlobalContext";
 
 const ExperienceBarDynamic = dynamic(
   () => import("../components/ExperienceBar"),
@@ -23,6 +24,7 @@ const GitCornerDynamic = dynamic(
 )
 
 interface HomeProps {
+  userName: string;
   level: number;
   currentExperience: number;
   completedChallenges: number;
@@ -41,71 +43,74 @@ export default function Home(props: HomeProps) {
   }
 
   return (
-    <ChallengesProvider
-      level={props.level}
-      currentExperience={props.currentExperience}
-      completedChallenges={props.completedChallenges}
-      selectChallengesContainer={selectChallengesContainer}
-    >
-      <ExperienceBarDynamic />
-      <GitCornerDynamic />
-      <div className={styles.container}>
-        <Head>
-          <title>Início | PomoTask </title>
-        </Head>
+    <GlobalProvider userName={props.userName}>
+      <ChallengesProvider
+        level={props.level}
+        currentExperience={props.currentExperience}
+        completedChallenges={props.completedChallenges}
+        selectChallengesContainer={selectChallengesContainer}
+      >
+        <ExperienceBarDynamic />
+        <GitCornerDynamic />
+        <div className={styles.container}>
+          <Head>
+            <title>Início | PomoTask </title>
+          </Head>
 
-        <StatsProvider
-          hoursPerDay={props.hoursPerDay}
-          hoursTotal={props.hoursTotal}
-          pomodorosPerDay={props.pomodorosPerDay}
-          pomodorosTotal={props.pomodorosTotal}
-        >
-          <CountdownProvider
-          selectChallengesContainer={selectChallengesContainer}
+          <StatsProvider
+            hoursPerDay={props.hoursPerDay}
+            hoursTotal={props.hoursTotal}
+            pomodorosPerDay={props.pomodorosPerDay}
+            pomodorosTotal={props.pomodorosTotal}
           >
-            <section>
+            <CountdownProvider
+              selectChallengesContainer={selectChallengesContainer}
+            >
+              <section>
 
-              <div>
-                <Profile />
-                <PomodoroTimer />
-                <Countdown />
-              </div>
+                <div>
+                  <Profile />
+                  <PomodoroTimer />
+                  <Countdown />
+                </div>
 
-              <div className={styles.flexLayoutContainer}>
-                <>
-                  <div className={styles.buttonsChangeContainer}>
-                    <button
-                      onClick={() => setSelectedContainer('challenges')}
-                      className={selectedContainer === 'challenges' ? styles.buttonActive : ''}
-                    />
-                    <button
-                      onClick={() => setSelectedContainer('informations')}
-                      className={selectedContainer === 'informations' ? styles.buttonActive : ''}
-                    />
-                  </div>
-                  {selectedContainer === 'challenges' ? <ChallengeBox /> : <UserInformation />}
-                </>
-              </div>
+                <div className={styles.flexLayoutContainer}>
+                  <>
+                    <div className={styles.buttonsChangeContainer}>
+                      <button
+                        onClick={() => setSelectedContainer('challenges')}
+                        className={selectedContainer === 'challenges' ? styles.buttonActive : ''}
+                      />
+                      <button
+                        onClick={() => setSelectedContainer('informations')}
+                        className={selectedContainer === 'informations' ? styles.buttonActive : ''}
+                      />
+                    </div>
+                    {selectedContainer === 'challenges' ? <ChallengeBox /> : <UserInformation />}
+                  </>
+                </div>
 
-            </section >
+              </section >
 
-            <footer className={styles.homeFooter}>
-              <span>Desenvolvido por&nbsp;</span>
-              <a href="http://github.com/Brendler17">Gustavo Brendler ⚡️</a>
-              <span>&nbsp;&</span>
-              <a href="https://www.rocketseat.com.br">&nbsp;Rocketseat 🚀</a>
-            </footer>
+              <footer className={styles.homeFooter}>
+                <span>Desenvolvido por&nbsp;</span>
+                <a href="http://github.com/Brendler17">Gustavo Brendler ⚡️</a>
+                <span>&nbsp;&</span>
+                <a href="https://www.rocketseat.com.br">&nbsp;Rocketseat 🚀</a>
+              </footer>
 
-          </CountdownProvider>
-        </StatsProvider>
-      </div >
-    </ChallengesProvider>
+            </CountdownProvider>
+          </StatsProvider>
+        </div >
+      </ChallengesProvider>
+    </GlobalProvider>
   )
 }
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
 
-  const { level,
+  const { userName,
+    level,
     currentExperience,
     completedChallenges,
     hoursPerDay,
@@ -116,6 +121,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 
   return {
     props: {
+      userName: String(userName),
       level: Number(level),
       currentExperience: Number(currentExperience),
       completedChallenges: Number(completedChallenges),
